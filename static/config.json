@@ -1,0 +1,12 @@
+{
+  "rapidapi" :
+    {
+      "x-rapidapi-host" : "aylien-text.p.rapidapi.com",
+      "x-rapidapi-key" : "60c77c672amshaa8c56519203e12p16db41jsn9e6316b7cbaa"
+    },
+  "bing-search":
+    {
+      "Ocp-Apim-Subscription-Key" : "9849c85174cf413f9751001fd439fa1f"
+    },
+  "random-org" : "c682dfc8-520d-4113-a813-df049363b88d"
+}
