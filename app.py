@@ -1,13 +1,19 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from request_apis import test_requests
 from datetime import timedelta
+import logging
+from logging.handlers import RotatingFileHandler
 import json
+from time import strftime
+import traceback
 
 app = Flask(__name__)
+logging.basicConfig(level=logging.DEBUG)
 elapsed_time = timedelta()
 
 successful_requests = 0
 total_requests = 0
+
 
 
 @app.route('/')
@@ -46,5 +52,24 @@ def metrics():
         return json.dumps({'LATENCY': 0, 'SUCCESS_RATE': 0, 'TOTAL_REQUESTS': 0, 'SUCCESSFUL_REQUESTS': 0})
 
 
-if __name__ == '__main__':
-    app.run(host='127.0.0.1', debug=True)
+@app.after_request
+def after_request(response):
+    timestamp = strftime('[%Y-%b-%d %H:%M]')
+    logger.error('%s %s %s %s %s %s', timestamp, request.remote_addr, request.method, request.scheme, request.full_path, response.status)
+    return response
+
+
+@app.errorhandler(Exception)
+def exceptions(e):
+    tb = traceback.format_exc()
+    timestamp = strftime('[%Y-%b-%d %H:%M]')
+    logger.error('%s %s %s %s %s 5xx INTERNAL SERVER ERROR\n%s', timestamp, request.remote_addr, request.method, request.scheme, request.full_path, tb)
+    return e.status_code
+
+
+# if __name__ == '__main__':
+handler = RotatingFileHandler('app.log', maxBytes=100000, backupCount=3)
+logger = logging.getLogger('tdm')
+logger.setLevel(logging.ERROR)
+logger.addHandler(handler)
+app.run(host='127.0.0.1', debug=True)
