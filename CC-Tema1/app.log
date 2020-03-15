@@ -1,0 +1,247 @@
+[2020-Feb-27 18:39] 127.0.0.1 GET http /? 200 OK
+[2020-Feb-27 18:39] 127.0.0.1 GET http /getMetrics/? 200 OK
+[2020-Feb-27 18:39] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:39] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:40] 127.0.0.1 GET http /metrics? 200 OK
+[2020-Feb-27 18:40] 127.0.0.1 GET http /getMetrics/? 200 OK
+[2020-Feb-27 18:41] 127.0.0.1 GET http /? 200 OK
+[2020-Feb-27 18:41] 127.0.0.1 GET http /getMetrics/? 200 OK
+[2020-Feb-27 18:41] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:41] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:41] 127.0.0.1 GET http /metrics? 200 OK
+[2020-Feb-27 18:41] 127.0.0.1 GET http /getMetrics/? 200 OK
+[2020-Feb-27 18:43] 127.0.0.1 GET http /? 200 OK
+[2020-Feb-27 18:43] 127.0.0.1 GET http /getMetrics/? 200 OK
+[2020-Feb-27 18:43] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:47] 127.0.0.1 GET http /? 200 OK
+[2020-Feb-27 18:47] 127.0.0.1 GET http /getMetrics/? 200 OK
+[2020-Feb-27 18:47] 127.0.0.1 GET http /favicon.ico? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\werkzeug\routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-Feb-27 18:47] 127.0.0.1 GET http /favicon.ico? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\werkzeug\routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 1815, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 1743, in handle_http_exception
+    return handler(e)
+  File "D:\Programare\CC-Tema1\app.py", line 67, in exceptions
+    return e.status_code
+AttributeError: 'NotFound' object has no attribute 'status_code'
+
+[2020-Feb-27 18:48] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:48] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:48] 127.0.0.1 GET http /metrics? 200 OK
+[2020-Feb-27 18:48] 127.0.0.1 GET http /getMetrics/? 200 OK
+[2020-Feb-27 18:48] 127.0.0.1 GET http /favicon.ico? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\werkzeug\routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-Feb-27 18:48] 127.0.0.1 GET http /favicon.ico? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\werkzeug\routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 1815, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 1743, in handle_http_exception
+    return handler(e)
+  File "D:\Programare\CC-Tema1\app.py", line 67, in exceptions
+    return e.status_code
+AttributeError: 'NotFound' object has no attribute 'status_code'
+
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /metrics? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getMetrics/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /favicon.ico? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\werkzeug\routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-Feb-27 18:50] 127.0.0.1 GET http /favicon.ico? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\werkzeug\routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 1815, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 1743, in handle_http_exception
+    return handler(e)
+  File "D:\Programare\CC-Tema1\app.py", line 67, in exceptions
+    return e.status_code
+AttributeError: 'NotFound' object has no attribute 'status_code'
+
+[2020-Feb-27 18:50] 127.0.0.1 GET http /metrics? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getMetrics/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /favicon.ico? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\werkzeug\routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-Feb-27 18:50] 127.0.0.1 GET http /favicon.ico? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\werkzeug\routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 1815, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "D:\Programare\CC-Tema1\env\lib\site-packages\flask\app.py", line 1743, in handle_http_exception
+    return handler(e)
+  File "D:\Programare\CC-Tema1\app.py", line 67, in exceptions
+    return e.status_code
+AttributeError: 'NotFound' object has no attribute 'status_code'
+
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
+[2020-Feb-27 18:50] 127.0.0.1 GET http /getJoke/? 200 OK
