@@ -1,0 +1,300 @@
+{
+  "openapi" : "3.0.0",
+  "info" : {
+    "title" : "Petify",
+    "description" : "Petify API Documentation",
+    "version" : "1.0"
+  },
+  "servers" : [ {
+    "url" : "https://virtserver.swaggerhub.com/andreipetrescu98/Petify/1.0",
+    "description" : "SwaggerHub API Auto Mocking"
+  }, {
+    "url" : "https://petify-api.azurewebsites.net/",
+    "description" : "Petify API"
+  } ],
+  "paths" : {
+    "/adverts" : {
+      "get" : {
+        "tags" : [ "Adverts" ],
+        "summary" : "Get available adverts",
+        "operationId" : "getAdverts",
+        "responses" : {
+          "200" : {
+            "description" : "Success"
+          }
+        }
+      }
+    },
+    "/advert/{advertId}" : {
+      "get" : {
+        "tags" : [ "Adverts" ],
+        "summary" : "Get advert by id",
+        "operationId" : "getAdvertById",
+        "parameters" : [ {
+          "name" : "advertId",
+          "in" : "path",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "string",
+            "example" : "7dc6eb96-dac2-4e2a-a3a3-facb03711d92"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success"
+          },
+          "404" : {
+            "description" : "Advert not found"
+          }
+        }
+      }
+    },
+    "/adverts/{userId}" : {
+      "get" : {
+        "tags" : [ "Adverts" ],
+        "summary" : "Get adverts by user id",
+        "operationId" : "getUserAdverts",
+        "parameters" : [ {
+          "name" : "userId",
+          "in" : "path",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "string",
+            "example" : "andrei.p0209@gmail.com"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success"
+          }
+        }
+      }
+    },
+    "/advert" : {
+      "post" : {
+        "tags" : [ "Adverts" ],
+        "summary" : "Add advert",
+        "operationId" : "addAdvert",
+        "requestBody" : {
+          "description" : "Request body with advert info",
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/body"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Success"
+          }
+        }
+      }
+    },
+    "/upload-image" : {
+      "post" : {
+        "tags" : [ "Adverts" ],
+        "summary" : "Upload advert image to storage",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/body_1"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Success"
+          }
+        }
+      }
+    },
+    "/subscribe" : {
+      "post" : {
+        "tags" : [ "Adverts" ],
+        "summary" : "Subscribe to an advert",
+        "operationId" : "subscribe",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/body_2"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Success"
+          }
+        }
+      }
+    },
+    "/subscriptions/{userId}" : {
+      "get" : {
+        "tags" : [ "Adverts" ],
+        "summary" : "Get user's subscriptions",
+        "operationId" : "GetUserSubscriptions",
+        "parameters" : [ {
+          "name" : "userId",
+          "in" : "path",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "string",
+            "example" : "carbunebogdan@gmail.com"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success"
+          }
+        }
+      }
+    },
+    "/send_mail" : {
+      "post" : {
+        "tags" : [ "Mail service" ],
+        "summary" : "Send confirmation mail",
+        "operationId" : "sendMail",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/body_3"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Success"
+          }
+        }
+      }
+    },
+    "/add_event/{advertId}" : {
+      "get" : {
+        "tags" : [ "Calendar Service" ],
+        "summary" : "Add event in user's calendar",
+        "operationId" : "addEvent",
+        "parameters" : [ {
+          "name" : "advertId",
+          "in" : "path",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "string",
+            "example" : "7dc6eb96-dac2-4e2a-a3a3-facb03711d92"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success"
+          }
+        }
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "body" : {
+        "type" : "object",
+        "properties" : {
+          "title" : {
+            "type" : "string",
+            "example" : "Rex vrea plimbat"
+          },
+          "description" : {
+            "type" : "string",
+            "example" : "Rex are nevoie de o plimbare weekendul acesta."
+          },
+          "start_date" : {
+            "type" : "string",
+            "example" : "2020-06-01T08:47:09.000Z"
+          },
+          "end_date" : {
+            "type" : "string",
+            "example" : "2020-06-01T09:47:15.000Z"
+          },
+          "location" : {
+            "type" : "string",
+            "example" : "27.582740200000003,47.1444732"
+          },
+          "price" : {
+            "type" : "integer",
+            "example" : 20
+          },
+          "user_id" : {
+            "type" : "string",
+            "example" : "alinciocoveanu@gmail.com"
+          },
+          "user_name" : {
+            "type" : "string",
+            "example" : "Alin Ciocoveanu"
+          },
+          "user_picture" : {
+            "type" : "string",
+            "example" : "https://lh5.googleusercontent.com/-lLeBJ16TGBk/AAAAAAAAAAI/AAAAAAAAAAA/AAKWJJNM1c4xjOgIkviFbdtgWP01Hc86CA/s96-c/photo.jpg"
+          }
+        }
+      },
+      "body_1" : {
+        "type" : "object",
+        "properties" : {
+          "advertId" : {
+            "type" : "string",
+            "example" : "7dc6eb96-dac2-4e2a-a3a3-facb03711d92"
+          },
+          "imageData" : {
+            "type" : "string",
+            "format" : "binary"
+          }
+        }
+      },
+      "body_2" : {
+        "type" : "object",
+        "properties" : {
+          "user_id" : {
+            "type" : "string",
+            "example" : "carbunebogdan@gmail.com"
+          },
+          "advert_id" : {
+            "type" : "string",
+            "example" : "7dc6eb96-dac2-4e2a-a3a3-facb03711d92"
+          }
+        }
+      },
+      "body_3" : {
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "string",
+            "example" : "1761bd3e-dd36-4b8a-975e-fe6a49259cc1"
+          },
+          "to" : {
+            "type" : "string",
+            "example" : "alinciocoveanu@gmail.com"
+          },
+          "username" : {
+            "type" : "string",
+            "example" : "Alin Ciocoveanu"
+          }
+        }
+      }
+    }
+  }
+}
